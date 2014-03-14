@@ -1,0 +1,27 @@
+<div class="page-header">
+
+  <h1>Create a Reservation</h1>
+</div>
+
+<% user = User.find_by(:id => session[:user_id]) %>
+<% if session[:user_id].present?  %>
+
+<p>Choose a day and time</p>
+<% @reservation_list.each do |reservation| %>
+  <div class="row">
+    <div class="row-md-4">
+
+
+    </div>
+    <div>
+
+
+      <li><a href="/reservations/<%= reservation.id %>/edit"><%=reservation.day %> <%= reservation.time %></a></li>
+    </div>
+  </div>
+<% end %>
+
+<% else %>
+<p>Please sign in to make a reservation</p>
+
+<% end %>
