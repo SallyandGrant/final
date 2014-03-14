@@ -17,7 +17,7 @@ Week6::Application.routes.draw do
 
 
   get "/about" => 'about#index'
-  get "/locations/results" => "about#results"
+  get "/locations/results" => "locations#results"
   get "/locations" => 'locations#index'
 
 

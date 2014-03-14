@@ -13,7 +13,7 @@ class ProductsController < ApplicationController
   def destroy
     product = Item.find_by(:id => params[:product_id])
     product.destroy
-    redirect_to "/products", notice: "That product is toast!"
+    redirect_to "/products", notice: "That item is toast!"
   end
 
   def new

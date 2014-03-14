@@ -50,19 +50,19 @@ puts "Sweet!  Or is that savory?  In either case, there are now #{Item.count} re
 
 
 Reservation.destroy_all
-["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"].each do |day|
+["Thursday", "Friday", "Saturday", "Sunday"].each do |day|
   r = Reservation.new
   r.day = day
   r.time = "6PM"
   r.save
 end
-["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"].each do |day|
+["Thursday", "Friday", "Saturday", "Sunday"].each do |day|
   r = Reservation.new
   r.day = day
   r.time = "7PM"
   r.save
 end
-["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"].each do |day|
+["Thursday", "Friday", "Saturday", "Sunday"].each do |day|
   r = Reservation.new
   r.day = day
   r.time = "8PM"

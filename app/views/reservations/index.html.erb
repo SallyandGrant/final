@@ -7,21 +7,51 @@
 <% if session[:user_id].present?  %>
 
 <p>Choose a day and time</p>
-<% @reservation_list.each do |reservation| %>
-  <div class="row">
-    <div class="row-md-4">
+
+<div class="row">
+<div class="row-md-4">
+  <% @reservation_list.each do |reservation| %>
+    <% if reservation.day == "Thursday" %>
+      <li><a href="/reservations/<%= reservation.id %>/edit"> <%=reservation.day %> <%= reservation.time %></a></li>
+    <% end %>
+  <% end %>
+</div>
+</div>
+
+<div class="row">
+<div class="row-md-4">
+  <% @reservation_list.each do |reservation| %>
+    <% if reservation.day == "Friday" %>
+      <li><a href="/reservations/<%= reservation.id %>/edit"> <%=reservation.day %> <%= reservation.time %></a></li>
+    <% end %>
+  <% end %>
+</div>
+</div>
+
+<div class="row">
+<div class="row-md-4">
+  <% @reservation_list.each do |reservation| %>
+    <% if reservation.day == "Saturday" %>
+      <li><a href="/reservations/<%= reservation.id %>/edit"> <%=reservation.day %> <%= reservation.time %></a></li>
+    <% end %>
+  <% end %>
+</div>
+</div>
+
+<div class="row">
+<div class="row-md-4">
+  <% @reservation_list.each do |reservation| %>
+    <% if reservation.day == "Sunday" %>
+      <li><a href="/reservations/<%= reservation.id %>/edit"> <%=reservation.day %> <%= reservation.time %></a></li>
+    <% end %>
+  <% end %>
+</div>
+</div>
 
 
-    </div>
-    <div>
-
-
-      <li><a href="/reservations/<%= reservation.id %>/edit"><%=reservation.day %> <%= reservation.time %></a></li>
-    </div>
-  </div>
-<% end %>
 
 <% else %>
 <p>Please sign in to make a reservation</p>
 
 <% end %>
+

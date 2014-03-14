@@ -15,6 +15,7 @@ class ReservationsController < ApplicationController
 
   def show
     @reservation = Reservation.find_by(:id => params[:reservation_id])
+    @day =  Revervation. params[:day]
     # @bookings = Booking.where(:booking_id => @user.id)
   end
 
