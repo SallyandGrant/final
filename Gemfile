@@ -13,6 +13,8 @@ group :production do
   gem 'rails_12factor'
 end
 
+#Used this to counter response length error - Grant
+gem 'thin'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
