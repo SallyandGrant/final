@@ -1,8 +1,8 @@
 class CreateBookings < ActiveRecord::Migration
   def change
     create_table :bookings do |t|
-      t.string  :reservation_id
-      t.string :user_id
+      t.integer  :reservation_id
+      t.integer :user_id
       t.string :party_size
 
 

@@ -14,8 +14,8 @@
 ActiveRecord::Schema.define(version: 20140306212512) do
 
   create_table "bookings", force: true do |t|
-    t.string   "reservation_id"
-    t.string   "user_id"
+    t.integer   "reservation_id"
+    t.integer   "user_id"
     t.string   "party_size"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -40,8 +40,8 @@ ActiveRecord::Schema.define(version: 20140306212512) do
   create_table "reservations", force: true do |t|
     t.string   "day"
     t.string   "time"
-    t.string   "booking_id"
-    t.string   "user_id"
+    t.integer   "booking_id"
+    t.integer   "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -61,8 +61,8 @@ ActiveRecord::Schema.define(version: 20140306212512) do
     t.string   "password"
     t.string   "email"
     t.string   "admin"
-    t.string   "booking_id"
-    t.string   "reservation_id"
+    t.integer   "booking_id"
+    t.integer   "reservation_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

@@ -5,8 +5,8 @@ class CreateUsers < ActiveRecord::Migration
       t.string :password
       t.string :email
       t.string :admin
-      t.string :booking_id
-      t.string :reservation_id
+      t.integer :booking_id
+      t.integer :reservation_id
       t.datetime :created_at
       t.datetime :updated_at
       t.timestamps
